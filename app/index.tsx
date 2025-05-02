@@ -39,12 +39,17 @@ export default function Index() {
           <Feather name="settings" size={14} color="white" /> FILTRAR </Text>
       </View>
 
-      <View style={{flexDirection:"row"}}>
-        <Text style= {{fontSize:14, color:"white",fontFamily:"PixelFont",backgroundColor:"#6E59A5",borderColor:"#4A3D70"}}> Desafío del Ahorcado </Text>
-        <Text style= {{fontSize:14, color:"white",fontFamily:"PixelFont", backgroundColor:"#5FD068",borderColor:"#4A3D70", padding:10}}> Pixel Reveal </Text>
+      <View style={{flexDirection:"row", marginBottom:20}}>
+        <Text style= {{fontSize:14, color:"white",fontFamily:"PixelFont",backgroundColor:"#6E59A5",borderColor:"#4A3D70", padding:10}}>Desafío del Ahorcado </Text>
+        <Text style= {{fontSize:14, color:"white",fontFamily:"PixelFont", backgroundColor:"#5FD068",borderColor:"#4A3D70", padding:10}}>Pixel Reveal </Text>
       </View>
      
-           
+      <View style={{height:200, width:390, borderWidth:3, borderColor:"#4A3D70", marginBottom:20}}>
+      </View>
+      <View style={{height:200, width:390, borderWidth:3, borderColor:"#4A3D70", marginBottom:20}}>
+      </View>
+      <View style={{height:200, width:390, borderWidth:3, borderColor:"#4A3D70", marginBottom:20}}>
+      </View>
     </View>
   );
 }
