@@ -47,12 +47,18 @@ export default function Index() {
       </View>
      
       <View style={{height:200, width:390, borderWidth:3, borderColor:"#4A3D70", marginBottom:20}}>
-      <View style={styles.separator} />
-      <ContenidoList />
+        <View style={styles.separator} />
+        <ContenidoList />
       </View>
+
       <View style={{height:200, width:390, borderWidth:3, borderColor:"#4A3D70", marginBottom:20}}>
+        <View style={styles.separator} />
+          <ContenidoList />
       </View>
+      
       <View style={{height:200, width:390, borderWidth:3, borderColor:"#4A3D70", marginBottom:20}}>
+        <View style={styles.separator} />
+          <ContenidoList />
       </View>
     </View>
   );

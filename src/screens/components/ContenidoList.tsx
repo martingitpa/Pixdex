@@ -27,7 +27,6 @@ export function ContenidoList() {
           href={ROUTES.CONTENIDO}
           style={{
             backgroundColor: "#403E43",
-            borderRadius: 20,
             width: "30%",
             padding: 10,
             gap: 10,
