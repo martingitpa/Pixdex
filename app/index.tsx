@@ -1,6 +1,8 @@
-import { Text, View } from "react-native";
+import { StyleSheet,Text, View } from "react-native";
 import {useFonts} from "expo-font"
 import Feather from '@expo/vector-icons/Feather';
+import { ContenidoCard } from "@/src/screens/components/ContenidoCard";
+import { ContenidoList} from "@/src/screens/components/ContenidoList";
 
 export default function Index() {
   const [fontsLoaded] = useFonts({
@@ -45,6 +47,8 @@ export default function Index() {
       </View>
      
       <View style={{height:200, width:390, borderWidth:3, borderColor:"#4A3D70", marginBottom:20}}>
+      <View style={styles.separator} />
+      <ContenidoList />
       </View>
       <View style={{height:200, width:390, borderWidth:3, borderColor:"#4A3D70", marginBottom:20}}>
       </View>
@@ -53,3 +57,8 @@ export default function Index() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  screenContainer: { flex: 1, backgroundColor: "lightgreen" },
+  separator: { height: 20 },
+});
