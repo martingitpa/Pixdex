@@ -41,9 +41,59 @@ export default function Index() {
           <Feather name="settings" size={14} color="white" /> FILTRAR </Text>
       </View>
 
-      <View style={{flexDirection:"row", marginBottom:20}}>
-        <Text style= {{fontSize:14, color:"white",fontFamily:"PixelFont",backgroundColor:"#6E59A5",borderColor:"#4A3D70", padding:10}}>Desafío del Ahorcado </Text>
-        <Text style= {{fontSize:14, color:"white",fontFamily:"PixelFont", backgroundColor:"#5FD068",borderColor:"#4A3D70", padding:10}}>Pixel Reveal </Text>
+      <View style={{ flexDirection: "row", gap: 20, marginBottom: 20 }}>
+        
+        {/* Tarjeta 1 */}
+        <View style={{
+          backgroundColor: "#6E59A5",
+          borderColor: "#4A3D70",
+          borderWidth: 2,
+          padding: 10,
+          width: 180,
+          height: 85,
+          justifyContent: "space-between"
+        }}>
+          <Text style={{ color: "white", fontSize: 14, fontFamily: "PixelFont" }}>
+            Desafío del Ahorcado
+          </Text>
+          <Text style={{ color: "white", fontSize: 7}}>
+            Adivina los títulos letra por letra. ¿Cuántos puedes identificar?
+          </Text>
+          <Text style={{
+            color: "white",
+            fontSize: 8,
+            fontFamily: "PixelFont",
+            alignSelf: "flex-end"
+          }}>
+            Jugar
+          </Text>
+        </View>
+
+        {/* Tarjeta 2 */}
+        <View style={{
+          backgroundColor: "#5FD068",
+          borderColor: "#4A3D70",
+          borderWidth: 2,
+          padding: 10,
+          width: 180,
+          height: 85,
+          justifyContent: "space-between"
+        }}>
+          <Text style={{ color: "white", fontSize: 14, fontFamily: "PixelFont" }}>
+            Pixel Reveal
+          </Text>
+          <Text style={{ color: "white", fontSize: 7}}>
+            Identifica títulos desde imágenes pixeladas. ¡Pon a prueba tu memoria visual!
+          </Text>
+          <Text style={{
+            color: "white",
+            fontSize: 8,
+            fontFamily: "PixelFont",
+            alignSelf: "flex-end"
+          }}>
+            Jugar
+          </Text>
+        </View>
       </View>
      
       <View style={{height:200, width:390, borderWidth:3, borderColor:"#4A3D70", marginBottom:20}}>
