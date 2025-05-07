@@ -8,14 +8,17 @@ export function ContenidoList() {
     {
       name: "Contenido 1",
       image: "https://place-hold.it/170x150",
+      slug: "contenido-1",
     },
     {
       name: "Contenido 2",
       image: "https://place-hold.it/170x150",
+      slug: "contenido-2",
     },
     {
       name: "Contenido 3",
       image: "https://place-hold.it/170x150",
+      slug: "contenido-3",
     },
   ];
 
@@ -24,7 +27,7 @@ export function ContenidoList() {
       data={contenidoItems}
       renderItem={({ item }) => (
         <Link
-          href={ROUTES.CONTENIDO}
+          href={ROUTES.DETAIL}
           style={{
             backgroundColor: "#403E43",
             width: "30%",

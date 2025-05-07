@@ -14,7 +14,11 @@ export function ContenidoCard({
     <View style={styles.card}>
       <ImageBackground source={image}>
       </ImageBackground>
+      <View>
+        <Text style={styles.titleText}>{name}</Text>
+      </View>
     </View>
+    
   );
 }
 
@@ -24,5 +28,9 @@ export function ContenidoCard({
 const styles = StyleSheet.create({
   card: {
     height:120,
+  },
+  titleText: {
+    fontWeight: "bold",
+    fontSize: 18,
   },
 });
