@@ -6,19 +6,25 @@ import { ROUTES } from "@/src/navigation/routes";
 export function ContenidoList() {
   const contenidoItems = [
     {
-      name: "Contenido 1",
+      name: "Stranger Things",
       image: "https://place-hold.it/170x150",
-      slug: "contenido-1",
+      slug: "stranger-things",
+      categories: ["Drama", "Fantasy"],
+      type: "Serie",
     },
     {
-      name: "Contenido 2",
+      name: "Breaking Bad",
       image: "https://place-hold.it/170x150",
-      slug: "contenido-2",
+      slug: "breaking-bad",
+      categories: ["Crime", "Drama"],
+      type: "Serie",
     },
     {
-      name: "Contenido 3",
+      name: "The Office",
       image: "https://place-hold.it/170x150",
-      slug: "contenido-3",
+      slug: "the-office",
+      categories: ["Comedy"],
+      type: "Serie",
     },
   ];
 

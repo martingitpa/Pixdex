@@ -56,7 +56,7 @@ export default function Index() {
           <Text style={{ color: "white", fontSize: 14, fontFamily: "PixelFont" }}>
             Desafío del Ahorcado
           </Text>
-          <Text style={{ color: "white", fontSize: 7}}>
+          <Text style={{ color: "white", fontSize: 8}}>
             Adivina los títulos letra por letra. ¿Cuántos puedes identificar?
           </Text>
           <Text style={{
@@ -82,7 +82,7 @@ export default function Index() {
           <Text style={{ color: "white", fontSize: 14, fontFamily: "PixelFont" }}>
             Pixel Reveal
           </Text>
-          <Text style={{ color: "white", fontSize: 7}}>
+          <Text style={{ color: "white", fontSize: 8}}>
             Identifica títulos desde imágenes pixeladas. ¡Pon a prueba tu memoria visual!
           </Text>
           <Text style={{
@@ -96,17 +96,62 @@ export default function Index() {
         </View>
       </View>
      
-      <View style={{height:200, width:390, borderWidth:3, borderColor:"#4A3D70", marginBottom:20}}>
+      <View style={{height:200, width:390, borderWidth:3, borderColor:"#403E43", marginBottom:20, position: "relative"}}>
+        {/* Etiqueta superior izquierda */}
+        <View style={{
+          position: "absolute",
+          top: -10,
+          left: 10,
+          backgroundColor: "#6E59A5",
+          paddingHorizontal: 10,
+          paddingVertical: 2,
+          borderWidth:2,
+          borderColor:"#9B87F5",
+          zIndex: 1,
+        }}>
+          <Text style={{ color: "white", fontFamily:"PixelFont", fontSize: 7 }}>SERIES</Text>
+        </View>
+
         <View style={styles.separator} />
         <ContenidoList />
       </View>
 
-      <View style={{height:200, width:390, borderWidth:3, borderColor:"#4A3D70", marginBottom:20}}>
+      <View style={{height:200, width:390, borderWidth:3, borderColor:"#403E43", marginBottom:20, position: "relative"}}>
+        {/* Etiqueta superior izquierda */}
+        <View style={{
+          position: "absolute",
+          top: -10,
+          left: 10,
+          backgroundColor: "#6E59A5", 
+          paddingHorizontal: 10,
+          paddingVertical: 2,
+          borderWidth:2,
+          borderColor:"#9B87F5",
+          zIndex: 1,
+        }}>
+          <Text style={{ color: "white", fontFamily:"PixelFont", fontSize: 7 }}>PELÍCULAS</Text>
+        </View>
+
         <View style={styles.separator} />
           <ContenidoList />
       </View>
       
-      <View style={{height:200, width:390, borderWidth:3, borderColor:"#4A3D70", marginBottom:20}}>
+      <View style={{height:200, width:390, borderWidth:3, borderColor:"#403E43", marginBottom:20, position: "relative"}}>
+        {/* Etiqueta superior izquierda */}
+        <View style={{
+          position: "absolute",
+          top: -10,
+          left: 10,
+          backgroundColor: "#6E59A5", 
+          paddingHorizontal: 10,
+          paddingVertical: 2,
+          borderWidth:2,
+          borderColor:"#9B87F5",
+          zIndex: 1,
+        }}>
+          <Text style={{ color: "white", fontFamily:"PixelFont", fontSize: 7 }}>ANIME</Text>
+        </View>
+
         <View style={styles.separator} />
           <ContenidoList />
       </View>
@@ -115,6 +160,6 @@ export default function Index() {
 }
 
 const styles = StyleSheet.create({
-  screenContainer: { flex: 1, backgroundColor: "lightgreen" },
+  screenContainer: { flex: 1},
   separator: { height: 20 },
 });

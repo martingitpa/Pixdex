@@ -5,6 +5,8 @@ import { StyleSheet, Text, View } from "react-native";
 type TContenidoCardProps = {
   name: string;
   image: string;
+  type: string;
+  categories: string[];
 };
 export function ContenidoCard({
   name,
