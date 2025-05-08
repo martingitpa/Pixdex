@@ -2,6 +2,7 @@ import { FlatList, StyleSheet } from "react-native";
 import { ContenidoCard } from "./ContenidoCard";
 import { Link } from "expo-router";
 import { ROUTES } from "@/src/navigation/routes";
+import colors from "@/src/constants/colors";
 
 export function ContenidoList() {
   const contenidoItems = [
@@ -25,7 +26,7 @@ export function ContenidoList() {
       slug: "the-office",
       categories: ["Comedy"],
       type: "Serie",
-    },
+    }, 
   ];
 
   return (
@@ -35,10 +36,15 @@ export function ContenidoList() {
         <Link
           href={ROUTES.DETAIL}
           style={{
-            backgroundColor: "#403E43",
+            backgroundColor:   colors.gris,
             width: "30%",
             padding: 10,
             gap: 10,
+            borderWidth: 1,
+            borderRightColor:  colors.grisClaro,
+            borderBottomColor: colors.grisClaro,
+            borderTopColor:    colors.grisOscuro,
+            borderLeftColor:   colors.grisOscuro,
           }}
         >
           <ContenidoCard {...item} />

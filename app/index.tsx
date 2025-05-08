@@ -5,6 +5,7 @@ import { ContenidoList} from "@/src/screens/components/ContenidoList";
 import { CajaJuegos } from "@/src/screens/components/CajaJuegos";
 import { CajaCategoriaFlatList } from "@/src/screens/components/CajaCategoriaFlatList";
 import { CajaIndicadoraAcciones } from "@/src/screens/components/CajaIndicadoraAcciones";
+import colors from "@/src/constants/colors";
 import { Feather } from "@expo/vector-icons";
 
 export default function Index() {
@@ -18,7 +19,7 @@ export default function Index() {
         flex: 1,
         justifyContent: "flex-start",
         alignItems: "center",
-        backgroundColor: "#1A1F2C",
+        backgroundColor: colors.fondo,
         paddingTop: 20,
       }}
     >
@@ -26,7 +27,7 @@ export default function Index() {
         <Text
           style={{
             fontSize: 18,
-            color: "#635193",
+            color: colors.purpura,
             fontWeight: "bold",
             fontFamily: "PixelFont",
           }}
@@ -41,14 +42,14 @@ export default function Index() {
       <View style={{ flexDirection: "row", gap: 20, marginBottom: 20 }}>
         {/* Tarjeta 1 */}
         <CajaJuegos
-          backgroundColor="#6E59A5"
+          backgroundColor={colors.purpura}
           text="Desafío del Ahorcado"
           descripcion="Adivina los títulos letra por letra. ¿Cuántos puedes identificar?"
         ></CajaJuegos>
 
         {/* Tarjeta 2 */}
         <CajaJuegos
-          backgroundColor="#5FD068"
+          backgroundColor={colors.verde}
           text="Pixel Reveal"
           descripcion="Identifica títulos desde imágenes pixeladas. ¡Pon a prueba tu memoria visual!"
         ></CajaJuegos>
