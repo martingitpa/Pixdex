@@ -59,7 +59,7 @@ export default function Index() {
         <ContenidoList />
       </CajaCategoriaFlatList>
 
-      <CajaCategoriaFlatList text="PELICULAS">
+      {/* <CajaCategoriaFlatList text="PELICULAS">
         <View style={styles.separator} />
         <ContenidoList />
       </CajaCategoriaFlatList>
@@ -67,7 +67,7 @@ export default function Index() {
       <CajaCategoriaFlatList text="ANIME">
         <View style={styles.separator} />
         <ContenidoList />
-      </CajaCategoriaFlatList>
+      </CajaCategoriaFlatList> */}
     </View>
   );
 }

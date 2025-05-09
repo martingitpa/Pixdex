@@ -3,21 +3,28 @@ import { ImageBackground } from "expo-image";
 import { StyleSheet, Text, View } from "react-native";
 
 type TContenidoCardProps = {
-  name: string;
-  image: string;
-  type: string;
-  categories: string[];
+  id: number;
+  nombre: string;
+  descripcion: string;
+  generos: number[];
+  tipoId: number;
+  imageUrl: string;
+
 };
 export function ContenidoCard({
-  name,
-  image,
+  id,
+  nombre,
+  descripcion,
+  generos,
+  tipoId,
+  imageUrl,
 }: TContenidoCardProps) {
   return (
     <View style={styles.card}>
-      <ImageBackground source={image}>
+      <ImageBackground source={imageUrl}>
       </ImageBackground>
       <View>
-        <Text style={styles.titleText}>{name}</Text>
+        <Text style={styles.titleText}>{nombre}</Text>
       </View>
     </View>
     

@@ -1,5 +1,4 @@
-import { Stack } from "expo-router";
+import "react-native-reanimated";
+import { RootLayout } from "@/src/layouts/RootLayout";
 
-export default function RootLayout() {
-  return <Stack />;
-}
+export default RootLayout;
