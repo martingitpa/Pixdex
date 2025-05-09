@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
+import colors from "@/src/constants/colors";
 
 type CajaCategoriaFlatListProps = {
   text: string;
@@ -14,7 +15,7 @@ function CajaCategoriaFlatList({ text, children }: CajaCategoriaFlatListProps) {
             height: 200,
             width: 390,
             borderWidth: 3,
-            borderColor: "#403E43",
+            borderColor: colors.grisOscuro,
             marginBottom: 20,
             position: "relative",
           }}
@@ -25,11 +26,11 @@ function CajaCategoriaFlatList({ text, children }: CajaCategoriaFlatListProps) {
                 position: "absolute",
                 top: -10,
                 left: 10,
-                backgroundColor: "#6E59A5",
+                backgroundColor: colors.purpura,
                 paddingHorizontal: 10,
                 paddingVertical: 2,
                 borderWidth: 2,
-                borderColor: "#9B87F5",
+                borderColor: colors.purpuraClaro,
                 zIndex: 1,
               }}
             >

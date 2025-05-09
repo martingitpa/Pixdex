@@ -40,6 +40,6 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontWeight: "bold",
-    fontSize: 18,
+    fontSize: 18 ,
   },
 });

@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
+import colors from "@/src/constants/colors";
 
 type CajaJuegosProps = {
   backgroundColor: string;
@@ -13,7 +14,7 @@ function CajaJuegos({ backgroundColor, text, descripcion }: CajaJuegosProps) {
       <View
         style={{
           backgroundColor: backgroundColor,
-          borderColor: "#4A3D70",
+          borderColor: colors.grisOscuro,
           borderWidth: 2,
           padding: 10,
           width: 180,
