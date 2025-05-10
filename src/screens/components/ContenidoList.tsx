@@ -1,9 +1,11 @@
 import { FlatList, StyleSheet, View } from "react-native";
 import { ContenidoCard } from "./ContenidoCard";
-import { Link } from "expo-router";
+import { Link, useRouter } from "expo-router";
 import { ROUTES } from "@/src/navigation/routes";
 import { contenidosAudiovisuales } from "@/src/data/contenidosAudiovisuales";
 import colors from "@/src/constants/colors";
+
+const router = useRouter();
 
 export function ContenidoList() {
   const contenidoItems = [
@@ -35,7 +37,7 @@ export function ContenidoList() {
       data={contenidosAudiovisuales}
       renderItem={({ item }) => (
         <Link
-          href={ROUTES.DETAIL}
+          href={`/detail/${item.nombre}`}
           style={styles.cardContainer}
         >
           <ContenidoCard {...item} />
@@ -56,8 +58,7 @@ const styles = StyleSheet.create({
   },
   cardContainer: {
     backgroundColor: "#8E9196",
-    width: "30%",
+    width: 100,
     padding: 10,
-    gap: 10,
   },
 });

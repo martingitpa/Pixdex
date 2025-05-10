@@ -35,7 +35,7 @@ function CajaJuegos({ backgroundColor, text, descripcion }: CajaJuegosProps) {
         <Text
           style={{
             color: "white",
-            fontSize: 8,
+            fontSize: 10,
             fontFamily: "PixelFont",
             alignSelf: "flex-end",
           }}
