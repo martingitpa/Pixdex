@@ -1,12 +1,10 @@
 import { ScrollView, StyleSheet, View, Text } from "react-native";
-import { ContenidoList} from "@/src/screens/components/ContenidoList";
+import { ContenidoList } from "@/src/screens/components/ContenidoList";
 import { CajaJuegos } from "@/src/screens/components/CajaJuegos";
 import { CajaCategoriaFlatList } from "@/src/screens/components/CajaCategoriaFlatList";
 import { CajaIndicadoraAcciones } from "@/src/screens/components/CajaIndicadoraAcciones";
 import colors from "@/src/constants/colors";
 import { useFonts } from "expo-font";
-
-import { useRouter } from 'expo-router';
 
 export function HomeScreen() {
   const [fontsLoaded] = useFonts({
