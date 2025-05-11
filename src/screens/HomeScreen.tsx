@@ -4,12 +4,8 @@ import { CajaJuegos } from "@/src/screens/components/CajaJuegos";
 import { CajaCategoriaFlatList } from "@/src/screens/components/CajaCategoriaFlatList";
 import { CajaIndicadoraAcciones } from "@/src/screens/components/CajaIndicadoraAcciones";
 import colors from "@/src/constants/colors";
-import { useFonts } from "expo-font";
 
 export function HomeScreen() {
-  const [fontsLoaded] = useFonts({
-    'PixelFont': require("@/assets/fonts/PressStart2P-Regular.ttf"), 
-  });
   
   return (
     <ScrollView
@@ -18,7 +14,6 @@ export function HomeScreen() {
       <View
         style={{
           flex: 1,
-          justifyContent: "flex-start",
           alignItems: "center",
           paddingTop: 20,
         }}

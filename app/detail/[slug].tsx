@@ -10,9 +10,6 @@ import { generosContenidoAudiovisual } from "@/src/data/generosContenidoAudiovis
 import { tiposContenidoAudiovisual } from "@/src/data/tiposContenidoAudiovisual";
 
 export default function ContenidoSlugRoute() {
-   const [fontsLoaded] = useFonts({
-      'PixelFont': require("@/assets/fonts/PressStart2P-Regular.ttf"), 
-    });
   const { slug } = useLocalSearchParams(); // ← Accede a /detail/LOQUESEA
   const router = useRouter();
   const navigation = useNavigation();
@@ -80,10 +77,10 @@ const styles = StyleSheet.create({
   },
   borde:{
     alignSelf:"center",
-    height:700, 
+    height:790, 
     width:390, 
     borderWidth:3, 
-    borderColor:"#4A3D70", 
+    borderColor: colors.grisOscuro, 
     marginTop:30
   },
   botonBack:{
@@ -118,9 +115,9 @@ const styles = StyleSheet.create({
     marginLeft:20,
   },
   tag: {
-    backgroundColor: "#403E43",
+    backgroundColor: colors.grisOscuro,
     padding:5,
-    width:35,
+    width:50,
     alignSelf: "flex-start",
     marginLeft:20,
     marginBottom: 15,
@@ -139,7 +136,7 @@ const styles = StyleSheet.create({
     marginRight:20,
   },
   genresTitle: {
-    color: "#5FD068",
+    color: colors.verde,
     fontSize: 14,
     fontFamily: "PixelFont",
     marginBottom: 10,
@@ -152,7 +149,7 @@ const styles = StyleSheet.create({
     marginLeft:20,
   },
   genre: {
-    backgroundColor: "#403E43",
+    backgroundColor: colors.grisOscuro,
     color: "#fff",
     paddingHorizontal: 10,
     paddingVertical: 5,
