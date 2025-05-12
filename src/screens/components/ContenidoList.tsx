@@ -16,7 +16,7 @@ export function ContenidoList() {
             pathname: ROUTES.DETAIL,
             params: { slug: item.nombre },
           }}
-          style={styles.cardContainer}
+          style={styles.cardLink} // ✅ Estilo extra opcional
         >
           <ContenidoCard {...item} />
         </Link>
@@ -24,19 +24,15 @@ export function ContenidoList() {
       keyExtractor={(item) => item.nombre}
       horizontal
       showsHorizontalScrollIndicator={false}
-      contentContainerStyle={styles.contentContainer}
+      contentContainerStyle={styles.contentContainer} // ✅ clave para Android
     />
   );
 }
 
 const styles = StyleSheet.create({
   contentContainer: {
-    paddingHorizontal: 10,
-    gap: 10,
   },
-  cardContainer: {
-    backgroundColor: "#8E9196",
-    width: 100,
-    padding: 10,
+  cardLink: {
+    // sin padding ni margen vertical
   },
 });

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import colors from "@/src/constants/colors";
 
 type CajaJuegosProps = {
@@ -10,41 +10,67 @@ type CajaJuegosProps = {
 
 function CajaJuegos({ backgroundColor, text, descripcion }: CajaJuegosProps) {
   return (
-    <View>
-      <View
-        style={{
-          backgroundColor: backgroundColor,
-          borderColor: colors.grisOscuro,
-          borderWidth: 2,
-          padding: 10,
-          width: 180,
-          height: 85,
-          justifyContent: "space-between",
-        }}
-      >
-        <Text
-          style={{
-            fontSize: 14,
-            color: "white",
-            fontFamily: "PixelFont",
-          }}
-        >
-          {text}
-        </Text>
-        <Text style={{ color: "white", fontSize: 8 }}>{descripcion}</Text>
-        <Text
-          style={{
-            color: "white",
-            fontSize: 10,
-            fontFamily: "PixelFont",
-            alignSelf: "flex-end",
-          }}
-        >
-          Jugar
-        </Text>
+    <View style={styles.wrapper}>
+      <View style={[styles.container, { backgroundColor }]}>
+        {/* Título */}
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>{text}</Text>
+        </View>
+
+        {/* Descripción */}
+        <View style={styles.descriptionContainer}>
+          <Text style={styles.description}>{descripcion}</Text>
+        </View>
+
+        {/* Botón */}
+        <View style={styles.actionContainer}>
+          <Text style={styles.buttonText}>Jugar</Text>
+        </View>
       </View>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  wrapper: {
+    flex: 1,
+    padding: 5,
+  },
+  container: {
+    flex: 1,
+    borderColor: colors.grisOscuro,
+    borderWidth: 4,
+    padding: 10,
+    justifyContent: "space-between",
+  },
+  titleContainer: {
+    flex: 1,
+    justifyContent: "flex-start",
+  },
+  title: {
+    fontSize: 14,
+    color: "white",
+    fontFamily: "PixelFont",
+  },
+  descriptionContainer: {
+    flex: 2,
+    justifyContent: "center",
+  },
+  description: {
+    color: "white",
+    fontSize: 10,
+  },
+  actionContainer: {
+    flex: 1,
+    alignItems: "flex-end",
+    justifyContent: "flex-end",
+  },
+  buttonText: {
+    color: "white",
+    fontSize: 10,
+    fontFamily: "PixelFont",
+    marginTop: 5,
+  },
+});
 
 export { CajaJuegos };

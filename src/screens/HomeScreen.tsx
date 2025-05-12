@@ -8,67 +8,70 @@ import colors from "@/src/constants/colors";
 export function HomeScreen() {
   
   return (
-    <ScrollView
-      style={[styles.screenContainer, { backgroundColor: colors.fondo }]}
-    >
-      <View
-        style={{
-          flex: 1,
-          alignItems: "center",
-          paddingTop: 20,
-        }}
-      >
-        <View style={{ flexDirection: "row", marginBottom: 20 }}>
-          <Text
-            style={{
-              fontSize: 18,
-              color: colors.purpura,
-              fontWeight: "bold",
-              fontFamily: "PixelFont",
-            }}
-          >
-            {" "}
-            Pixdex{" "}
-          </Text>
+    <ScrollView style={[styles.screenContainer]}>
+      <View style={styles.mainContent}>
+        <View style={styles.headerRow}>
+          <Text style={styles.logoText}> Pixdex </Text>
           <CajaIndicadoraAcciones text="FILTRAR"></CajaIndicadoraAcciones>
         </View>
 
-        <View style={{ flexDirection: "row", gap: 20, marginBottom: 20 }}>
+        <View style={styles.gamesRow}>
           {/* Tarjeta 1 */}
-          <CajaJuegos
-            backgroundColor={colors.purpura}
-            text="Desafío del Ahorcado"
-            descripcion="Adivina los títulos letra por letra. ¿Cuántos puedes identificar?"
-          ></CajaJuegos>
+          <View style={styles.gameBox}>
+            <CajaJuegos
+              backgroundColor={colors.purpura}
+              text="Desafío del Ahorcado"
+              descripcion="Adivina los títulos letra por letra. ¿Cuántos puedes identificar?"
+            ></CajaJuegos>
+          </View>
 
           {/* Tarjeta 2 */}
-          <CajaJuegos
-            backgroundColor={colors.verde}
-            text="Pixel Reveal"
-            descripcion="Identifica títulos desde imágenes pixeladas. ¡Pon a prueba tu memoria visual!"
-          ></CajaJuegos>
+          <View style={styles.gameBox}>
+            <CajaJuegos
+              backgroundColor={colors.verde}
+              text="Pixel Reveal"
+              descripcion="Identifica títulos desde imágenes pixeladas. ¡Pon a prueba tu memoria visual!"
+            ></CajaJuegos>
+          </View>
         </View>
-
-        <CajaCategoriaFlatList text="SERIES">
-          <View style={styles.separator} />
-          <ContenidoList />
-        </CajaCategoriaFlatList>
-
-        <CajaCategoriaFlatList text="PELICULAS">
-          <View style={styles.separator} />
-          <ContenidoList />
-        </CajaCategoriaFlatList>
-
-        <CajaCategoriaFlatList text="ANIME">
-          <View style={styles.separator} />
-          <ContenidoList />
-        </CajaCategoriaFlatList>
       </View>
+
+      <CajaCategoriaFlatList text="SERIES">
+        <ContenidoList />
+      </CajaCategoriaFlatList>
+      <CajaCategoriaFlatList text="PELICULAS">
+        <ContenidoList />
+      </CajaCategoriaFlatList>
+      <CajaCategoriaFlatList text="ANIME">
+        <ContenidoList />
+      </CajaCategoriaFlatList>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   screenContainer: { flex: 1},
-  separator: { height: 20 },
+  mainContent: {
+    padding: 20,
+    gap: 20,
+  },
+  headerRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  logoText: {
+    fontSize: 24,
+    color: colors.purpura,
+    fontFamily: "PixelFont",
+    fontWeight: "bold",
+  },
+  gamesRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    gap: 10,
+  },
+  gameBox: {
+    flex: 1,
+  },
 });
