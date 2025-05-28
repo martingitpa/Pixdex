@@ -1,8 +1,8 @@
 import { ScrollView, StyleSheet, View, Text } from "react-native";
-import { ContenidoList } from "@/src/screens/components/ContenidoList";
-import { CajaJuegos } from "@/src/screens/components/CajaJuegos";
-import { CajaCategoriaFlatList } from "@/src/screens/components/CajaCategoriaFlatList";
-import { CajaIndicadoraAcciones } from "@/src/screens/components/CajaIndicadoraAcciones";
+import { ContenidoList } from "@/components/ContenidoList";
+import { CajaJuegos } from "@/components/CajaJuegos";
+import { CajaCategoriaFlatList } from "@/components/CajaCategoriaFlatList";
+import { CajaIndicadoraAcciones } from "@/components/CajaIndicadoraAcciones";
 import colors from "@/src/constants/colors";
 
 export function HomeScreen() {
@@ -37,13 +37,13 @@ export function HomeScreen() {
       </View>
 
       <CajaCategoriaFlatList text="SERIES">
-        <ContenidoList />
+        <ContenidoList tipoId={1}/>
       </CajaCategoriaFlatList>
       <CajaCategoriaFlatList text="PELICULAS">
-        <ContenidoList />
+        <ContenidoList tipoId={2}/>
       </CajaCategoriaFlatList>
       <CajaCategoriaFlatList text="ANIME">
-        <ContenidoList />
+        <ContenidoList tipoId={3}/>
       </CajaCategoriaFlatList>
     </ScrollView>
   );

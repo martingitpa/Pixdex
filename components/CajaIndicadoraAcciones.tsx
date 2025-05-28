@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import Feather from "@expo/vector-icons/Feather";
+import colors from "@/src/constants/colors";
 
 type CajaIndicadoraAccionesProps = {
   text: string;
@@ -20,14 +21,14 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     // justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: "#6E59A5",
+    backgroundColor: colors.fondo,
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderWidth: 2,
-    borderTopColor: "#9B87F5",
-    borderBottomColor: "#4A3D70",
-    borderLeftColor: "#9B87F5",
-    borderRightColor: "#4A3D70",
+    borderTopColor: colors.purpuraClaro,
+    borderBottomColor: colors.purpuraOscuro,
+    borderLeftColor: colors.purpuraClaro,
+    borderRightColor: colors.purpuraOscuro,
   },
   icon: {
     marginRight: 10,

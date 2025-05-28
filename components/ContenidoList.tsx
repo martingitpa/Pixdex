@@ -3,20 +3,28 @@ import { ContenidoCard } from "./ContenidoCard";
 import { Link, useRouter } from "expo-router";
 import { ROUTES } from "@/src/navigation/routes";
 import { contenidosAudiovisuales } from "@/src/data/contenidosAudiovisuales";
-import colors from "@/src/constants/colors";
 
-export function ContenidoList() {
+type ContenidoListProps = {
+  tipoId: number;
+};
+
+export function ContenidoList({tipoId} : ContenidoListProps) {
   const router = useRouter();
+
+  const filtrado = contenidosAudiovisuales.filter(
+    (contenido) => contenido.tipoId === tipoId
+  );
+
   return (
     <FlatList
-      data={contenidosAudiovisuales}
+      data={filtrado}
       renderItem={({ item }) => (
         <Link
           href={{
             pathname: ROUTES.DETAIL,
             params: { slug: item.nombre },
           }}
-          style={styles.cardLink} // ✅ Estilo extra opcional
+          style={styles.cardLink}
         >
           <ContenidoCard {...item} />
         </Link>
@@ -24,7 +32,7 @@ export function ContenidoList() {
       keyExtractor={(item) => item.nombre}
       horizontal
       showsHorizontalScrollIndicator={false}
-      contentContainerStyle={styles.contentContainer} // ✅ clave para Android
+      contentContainerStyle={styles.contentContainer}
     />
   );
 }
